@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class DecisionMaking {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Hello! What is your name?");
+		String answer;
+		do {
+		String name;
+		name = scan.nextLine();
+		
+		int num;
+		do {
+			num = scan.nextInt();		
+	} while(num <= 0 || num > 100);
+		
+		if (num % 2 != 0 && num < 60) {
+			System.out.println(+ num + " is odd.");
+		} else if (num % 2 == 0 && num <= 25 && num >= 2) {
+			System.out.println("Even and less than 25, " + name + ".");
+		}else if (num % 2 == 0 && num <= 60 && num >= 26) {
+			System.out.println("Even");
+		}else if (num % 2 == 0 && num > 60) {
+			System.out.println(+ num + " is even");
+		}else if (num != 0 && num > 60) {
+			System.out.println("Odd and over 60");
+		}
+		System.out.println("Do you wish to continue? (yes/no): ");
+		answer = scan.next();
+		
+	}
+		while (answer.equals("yes"));
+	}
+}

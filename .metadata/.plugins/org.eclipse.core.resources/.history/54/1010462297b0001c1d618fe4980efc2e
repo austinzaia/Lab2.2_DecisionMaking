@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class DecisionMaking {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		int num;
+		System.out.println("Enter a number between 1 and 100: ");
+		
+		num = in.nextInt();
+		num = num % 2 == 0 ? 1 : 0;
+		
+		if (num == 1) {
+			System.out.println(+ num  + " and odd.");
+		}
+	}
+
+}
